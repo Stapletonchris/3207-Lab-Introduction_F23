@@ -11,9 +11,6 @@ char randchar(){
 
     int randNum = 0;
    
-    /* seed the randomizer */
-	srand( (unsigned)time(NULL) );
-
     //Create a random number form 1 to 26
     for( int i=0; i<26; i++ ){
         randNum = rand() % 26;
