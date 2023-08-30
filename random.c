@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define ALPH 26
+#include "random.h"
 
-char* array_alph[ALPH] = {'a','b','c','d','e','f','g','h','i',
+char array_alph[26] = {'a','b','c','d','e','f','g','h','i',
     'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
-char randomchar(){
+char randchar(char array_alph[26]){
 
     int randNum = 0;
    
@@ -15,10 +15,11 @@ char randomchar(){
 	srand( (unsigned)time(NULL) );
 
     //Create a random number form 1 to 26
-    for( int i=0; i<ALPH; i++ ){
+    for( int i=0; i<26; i++ ){
         randNum = rand() % 26;
     }
 
+    return array_alph[randNum];
 
     
 
@@ -27,4 +28,3 @@ char randomchar(){
 
 
 
-}
